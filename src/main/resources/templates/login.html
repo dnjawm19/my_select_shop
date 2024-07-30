@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -16,7 +16,9 @@
 <body>
 <div id="login-form">
     <div id="login-title">Log into Select Shop</div>
-    <br>
+    <button id="login-kakao-btn" onclick="location.href='https://kauth.kakao.com/oauth/authorize?client_id=d1b95a93323b7e6b4a7878d44b688c80&redirect_uri=http://localhost:8080/api/user/kakao/callback&response_type=code'">
+        카카오로 로그인하기
+    </button>
     <button id="login-id-btn" onclick="location.href='/api/user/signup'">
         회원 가입하기
     </button>
