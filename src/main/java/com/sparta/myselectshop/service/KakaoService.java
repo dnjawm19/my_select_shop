@@ -110,7 +110,7 @@ public class KakaoService {
         String email = jsonNode.get("kakao_account")
             .get("email").asText();
 
-        log.info("카카오 사용자 정보: " + id + ", " + nickname + ", " + email);
+        log.info("카카오 사용자 정보: " + id + ", " + nickname + ", " + email );
         return new KakaoUserInfoDto(id, nickname, email);
     }
 }
