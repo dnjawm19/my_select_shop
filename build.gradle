@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.2'
     id 'io.spring.dependency-management' version '1.1.6'
+//    id 'org.flywaydb.flyway' version '10.17.0'
 }
 
 group = 'com.sparta'
@@ -49,6 +50,17 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
+//flyway {
+//    url = "jdbc:mysql://localhost:3306/shop"
+//    user = "root"
+//    password = "11301300"
+//    encoding = 'UTF-8'
+//    locations = ["filesystem:${file('src//main/resources/db/migration').absolutePath}"]
+////    locations = ["filesystem:${file('src/db.migration').absolutePath}"]
+//    validateOnMigrate = true
+//}
+//flywayMigrate.dependsOn(classes)
 
 tasks.named('test') {
     useJUnitPlatform()
